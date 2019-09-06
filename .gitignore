@@ -1,0 +1,5 @@
+.repo/
+.zsh_history
+.viminfo
+.gitconfig
+.bash_history
