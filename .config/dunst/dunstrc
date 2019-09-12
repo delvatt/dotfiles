@@ -1,7 +1,7 @@
 [global]
 monitor = 0
 follow = mouse
-geometry = "250x50-30+58"
+geometry = "550x100-30+58"
 indicate_hidden = yes
 shrink = no
 separator_height = 0
@@ -10,7 +10,7 @@ horizontal_padding = 24
 frame_width = 2
 sort = no
 idle_threshold = 120
-font = Noto Sans 8
+font = DejaVu Sans 10
 line_height = 4
 markup = full
 format = "<b>%s</b>\n%b"

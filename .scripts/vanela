@@ -8,7 +8,7 @@
 # I'd rather to call them using Dunst
 
 # Workspace indicator is generated using bspc subscribe
-# Which only update if there is an reaction on bspwm
+# Which only update if there is any reaction on bspwm
 # Window title is generated using xtitle
 # Which also has subscribe event ability
 # Clock is generated using looped date command
@@ -39,11 +39,11 @@ if [ -e ~/.cache/paintee ]; then
 fi
 
 # Panel configurations
-PANEL_HEIGHT=24
-PANEL_WIDTH=866
-PANEL_HORIZONTAL_OFFSET=250
-PANEL_VERTICAL_OFFSET=8
-PANEL_FONT="-lucy-tewi-medium-r-normal-*-11-90-100-100-c-60-iso10646-1"
+PANEL_HEIGHT=72
+PANEL_WIDTH=2356
+PANEL_HORIZONTAL_OFFSET=742
+PANEL_VERTICAL_OFFSET=16
+PANEL_FONT="DejaVuSans:size=22"
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_WM_NAME=bspwm_panel
 COLOR_DEFAULT_FG="$FOREGROUND"

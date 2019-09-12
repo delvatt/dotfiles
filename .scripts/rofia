@@ -33,7 +33,7 @@ rofi -show drun -sidebar-mode \
 -width 60 \
 -location 0 \
 -columns 3 \
--font "Noto Sans 8" \
+-font "DejaVu Sans 32" \
 -color-enabled true \
 -color-window "$BACKGROUND,$BLACK,$BACKGROUND" \
 -color-normal "$BACKGROUND,$FOREGROUND,$BACKGROUND,$BACKGROUND,$BLUE" \

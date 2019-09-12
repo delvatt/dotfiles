@@ -8,7 +8,7 @@ super + shift + Return
 
 ## Launch Rofi start menu
 super + d
-	rofia
+    rofia
 
 ## Launch common apps
 super + shift + {f,w,g}
