@@ -1,0 +1,21 @@
+[user]
+	name = Elvis Attro
+	email = attroelvis@gmail.com
+[core]
+	editor = vim
+	pager = most
+	fscache = false
+	symlinks = true
+	autocrlf = input
+[merge]
+	tool = vimdiff
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[credential]
+	helper = cache
+[credentila]
+[diff]

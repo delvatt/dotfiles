@@ -6,6 +6,9 @@
 .cache/
 .local/
 .dbus/
+.ssh/
+.fzf/
+.space-vim/
 .config/Thunar/
 .config/viewnior/
 .config/xfce4/
@@ -17,7 +20,7 @@
 .lesshst
 .zsh_history
 .viminfo
-.gitconfig
+.python_history
 .bash_history
 sv
 Downloads/
