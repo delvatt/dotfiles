@@ -6,6 +6,7 @@
 # Le PATH = répertoires dans lequels le shell va chercher les commandes
 # ATTENTION : le répertoire courant ne fait pas partie du PATH
 #export PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/sbin:$HOME/bin:$HOME/.local/bin"
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin
 
 
 # Default Viewer/Editor/Pager (for Crontab, CVS,...)
@@ -39,5 +40,5 @@ export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
 export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.0
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
-export PATH=$PATH:$GRADLE_HOME/bin:$MAVEN_HOME/bin
+#export PATH=$PATH:$GRADLE_HOME/bin:$MAVEN_HOME/bin
 #export PATH="$(yarn global bin):$PATH"

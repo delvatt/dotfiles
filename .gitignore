@@ -1,3 +1,4 @@
+.opt/
 .repo/
 .oh-my-zsh/
 .vim/
@@ -7,7 +8,8 @@
 .local/
 .dbus/
 .ssh/
-.fzf/
+.btpd/
+.fzf*
 .space-vim/
 .config/Thunar/
 .config/viewnior/
@@ -16,12 +18,18 @@
 .config/glib-2.0/
 .config/htop/
 .config/pulse/
+.config/menus/
+.config/chromium/
+.pki/
+.gnome/
+projects/
 .mozilla/
 .lesshst
-.zsh_history
 .viminfo
 .python_history
 .bash_history
+.zsh_history
 sv
 Downloads/
 Pictures
+.xsel.log

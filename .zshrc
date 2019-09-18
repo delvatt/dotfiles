@@ -9,9 +9,6 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="minia"
 
-# Complete path of oh-my-zsh script
-source $ZSH/oh-my-zsh.sh
-
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
@@ -46,11 +43,20 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+ HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git vi-mode)
+
+# Complete path of oh-my-zsh script
+source $ZSH/oh-my-zsh.sh
 
 
 # User configuration
@@ -73,13 +79,6 @@ export LC_ALL=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -113,7 +112,7 @@ plugins=(git vi-mode)
 #export KEYTIMEOUT=1
 
 # Remap ESC key to 'jj' for switching from normal mode to insert mode
-#bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'jj' vi-cmd-mode
 
 # List with colour and directory first
 alias ls='ls --group-directories-first --color=auto'
