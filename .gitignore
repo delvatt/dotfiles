@@ -28,8 +28,10 @@ projects/
 .viminfo
 .python_history
 .bash_history
-.zsh_history
+code
+dl
+docs
+pics
+vids
 sv
-Downloads/
-Pictures
 .xsel.log

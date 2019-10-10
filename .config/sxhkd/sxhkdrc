@@ -58,7 +58,7 @@ super + f
 super + {h,v,r}
 	bspc node -p {east,south,cancel}
 
-## Toggle beetwen floating & tiled
+## Toggle between floating & tiled
 super + space
     bspc node -t "~"{floating,tiled}
 
