@@ -18,6 +18,9 @@ export PAGER=most
 # Default zsh config files directory 
 export ZDOTDIR=$HOME/.config/zsh
 
+#Default zsh history file
+export HISTFILE=~/.cache/zsh/zsh_history
+
 # Default zsh completion dump file
 export ZSH_COMPDUMP="${HOME}/.cache/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
@@ -49,6 +52,9 @@ export MOST_INITFILE=$HOME/.config/most/.mostrc
 
 #Default less pager history file
 export LESSHISTFILE=$HOME/.cache/less/lesshst
+
+#Default python interpreter history file
+export PYTHONHISTORY=$HOME/.cache/python/python_history
 
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
