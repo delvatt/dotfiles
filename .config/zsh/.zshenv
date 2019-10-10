@@ -44,6 +44,9 @@ export GREP_OPTIONS='--color=auto'
 export PIPENV_VENV_IN_PROJECT=1
 
 ##### My custom addins #####
+#Default most pager config directory
+export MOST_INITFILE=$HOME/.config/most/.mostrc
+
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
 export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.0

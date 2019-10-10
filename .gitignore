@@ -24,10 +24,6 @@
 .gnome/
 projects/
 .mozilla/
-.lesshst
-.viminfo
-.python_history
-.bash_history
 code
 dl
 docs
