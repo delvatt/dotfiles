@@ -2,7 +2,6 @@
 .repo/
 .oh-my-zsh/
 .vim/
-.weechat/
 .fonts/
 .cache/
 .local/
@@ -11,7 +10,8 @@
 .btpd/
 .fzf*
 .space-vim/
-.config/Thunar/
+.config/weechat/logs/
+.config/weechat/weechat.log
 .config/viewnior/
 .config/xfce4/
 .config/geany/
@@ -22,7 +22,6 @@
 .config/chromium/
 .pki/
 .gnome/
-projects/
 .mozilla/
 code
 dl

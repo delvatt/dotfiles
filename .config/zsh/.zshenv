@@ -50,6 +50,9 @@ export PIPENV_VENV_IN_PROJECT=1
 #Default most pager config directory
 export MOST_INITFILE=$HOME/.config/most/.mostrc
 
+#Default weechat config directory
+export WEECHAT_HOME=$HOME/.config/weechat/
+
 #Default less pager history file
 export LESSHISTFILE=$HOME/.cache/less/lesshst
 
