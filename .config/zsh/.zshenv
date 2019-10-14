@@ -47,8 +47,11 @@ export GREP_OPTIONS='--color=auto'
 export PIPENV_VENV_IN_PROJECT=1
 
 ##### My custom addins #####
-#Default most pager config directory
+#Default most pager config file
 export MOST_INITFILE=$HOME/.config/most/.mostrc
+
+#Default wget config file
+export WGETRC=$HOME/.config/wget/.wgetrc
 
 #Default weechat config directory
 export WEECHAT_HOME=$HOME/.config/weechat/
