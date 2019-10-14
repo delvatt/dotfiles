@@ -77,6 +77,29 @@ export LC_ALL=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
+# FZF addition?
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Kill the lag when switching from normal mode to insert mode in vi-mode
+#export KEYTIMEOUT=1
+
+# Remap ESC key to 'jj' for switching from normal mode to insert mode
+bindkey -M viins 'jj' vi-cmd-mode
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -101,26 +124,8 @@ export LC_ALL=en_US.UTF-8
 # Alias for managing local dotfiles git bare repository.
 #alias dotfiles='/usr/bin/git --git-dir=/home/hacker/.dotfiles/ --work-tree=/home/hacker/'
 
-# FZF addition?
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Kill the lag when switching from normal mode to insert mode in vi-mode
-#export KEYTIMEOUT=1
-
-# Remap ESC key to 'jj' for switching from normal mode to insert mode
-bindkey -M viins 'jj' vi-cmd-mode
-
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
+# Start tmux with custom configuration file. 
+alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
 
 # List with colour and directory first
 alias ls='ls --group-directories-first --color=auto'
