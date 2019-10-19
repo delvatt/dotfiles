@@ -36,6 +36,11 @@ export LC_PAPER=en_US.utf8
 export LC_TELEPHONE=id_ID.utf8
 export LC_TIME=en_US.utf8
 
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_DATA_HOME=${HOME}/.local/share
+export RCRC=${XDG_CONFIG_HOME}/rcrc
+export BROWSER=firefox
+
 # Launch Bspwm
 # I put every autostart in bspwmrc
 exec bspwm
