@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## Environtment
-export PATH="${PATH}:$HOME/.scripts"
-export PATH="${PATH}:$HOME/.config/bspwm"
+#export PATH="${PATH}:$HOME/.config/bspwm"
 
 ## Coloring
 getcolors () {
@@ -89,10 +88,10 @@ killall -9 sxhkd vanela xsettingsd dunst
 sxhkd &
 vanela &
 xsettingsd &
-WALLPAPER=$(shuf -n1 -e ~/.wallpaper/*)
+WALLPAPER=$(shuf -n1 -e ~/pics/.wallpaper/*)
 SHORTWALLPAPER=$(echo $WALLPAPER | sed "s@.*/@@" | sed "s/\..*$//")
-ls ~/.wallpaper | sort -R | tail -$N | while read file; do # useless animation
-	hsetroot -fill ~/.wallpaper/$file -tint '#3c6f86'; sleep 0.1; done
+ls ~/pics/.wallpaper | sort -R | tail -$N | while read file; do # useless animation
+	hsetroot -fill ~/pics/.wallpaper/$file -tint '#3c6f86'; sleep 0.1; done
 hsetroot -fill $WALLPAPER -tint '#9ccfe6'
 dunst \
 -lb "$BACKGROUND" -lf "$FOREGROUND" -lfr "$GREEN" \

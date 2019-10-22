@@ -35,11 +35,15 @@ export LC_NUMERIC=id_ID.utf8
 export LC_PAPER=en_US.utf8
 export LC_TELEPHONE=id_ID.utf8
 export LC_TIME=en_US.utf8
+export LC_ALL=en_US.UTF-8
 
+#XDG Base Directory Specification
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_DATA_HOME=${HOME}/.local/share
 export RCRC=${XDG_CONFIG_HOME}/rcrc
 export BROWSER=firefox
+
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin
 
 # Launch Bspwm
 # I put every autostart in bspwmrc

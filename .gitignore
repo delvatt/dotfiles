@@ -3,8 +3,8 @@
 .vim/
 .fonts/
 .cache/
-.local/
 .dbus/
+.local/share
 .ssh/
 .btpd/
 .fzf*

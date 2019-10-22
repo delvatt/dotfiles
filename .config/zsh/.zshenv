@@ -6,7 +6,6 @@
 # Le PATH = répertoires dans lequels le shell va chercher les commandes
 # ATTENTION : le répertoire courant ne fait pas partie du PATH
 #export PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/sbin:$HOME/bin:$HOME/.local/bin"
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin
 
 
 # Default Viewer/Editor/Pager (for Crontab, CVS,...)
@@ -41,7 +40,7 @@ umask 022
 #export no_proxy="exemple.org"
 
 # De la couleur pour grep
-export GREP_OPTIONS='--color=auto'
+#export GREP_OPTIONS='--color=auto'
 
 # Python's pipenv to be created always inside project's root folder.
 export PIPENV_VENV_IN_PROJECT=1
