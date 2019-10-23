@@ -39,8 +39,10 @@ export LC_ALL=en_US.UTF-8
 
 #XDG Base Directory Specification
 export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 export RCRC=${XDG_CONFIG_HOME}/rcrc
+
 export BROWSER=firefox
 
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin

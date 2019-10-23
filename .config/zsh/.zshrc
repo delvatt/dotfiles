@@ -125,7 +125,7 @@ bindkey -s '^o' 'lfcd\n'
 #alias dotfiles='/usr/bin/git --git-dir=/home/hacker/.dotfiles/ --work-tree=/home/hacker/'
 
 # Start tmux with custom configuration file. 
-alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
+alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/.tmux.conf'
 
 # List with colour and directory first
 alias ls='ls --group-directories-first --color=auto'

@@ -15,13 +15,13 @@ export PAGER=most
 
 
 # Default zsh config files directory 
-export ZDOTDIR=$HOME/.config/zsh
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
-#Default zsh history file
-export HISTFILE=~/.cache/zsh/zsh_history
+# Default zsh history file
+export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 
 # Default zsh completion dump file
-export ZSH_COMPDUMP="${HOME}/.cache/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 
 # Permissions rw-r--r-- pour les fichiers crées
@@ -46,20 +46,23 @@ umask 022
 export PIPENV_VENV_IN_PROJECT=1
 
 ##### My custom addins #####
-#Default most pager config file
-export MOST_INITFILE=$HOME/.config/most/.mostrc
+# Default most pager config file
+export MOST_INITFILE=$XDG_CONFIG_HOME/most/.mostrc
 
-#Default wget config file
-export WGETRC=$HOME/.config/wget/.wgetrc
+# Default wget config file
+export WGETRC=$XDG_CONFIG_HOME/wget/.wgetrc
 
-#Default weechat config directory
-export WEECHAT_HOME=$HOME/.config/weechat/
+# Default weechat config directory
+export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat/
 
-#Default less pager history file
-export LESSHISTFILE=$HOME/.cache/less/lesshst
+# Default less pager history file
+export LESSHISTFILE=$XDG_CACHE_HOME/less/lesshst
+
+# Default tmux runtime directory
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
 #Default python interpreter history file
-export PYTHONHISTORY=$HOME/.cache/python/python_history
+export PYTHONHISTORY=$XDG_CACHE_HOME/python/python_history
 
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
