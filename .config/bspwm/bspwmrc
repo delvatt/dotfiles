@@ -17,7 +17,7 @@ getcolors () {
 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
 xrdb ~/.Xresources
-COLOR=$(shuf -n1 -e ~/.colors/*)
+COLOR=$(shuf -n1 -e $XDG_CONFIG_HOME/colors/*)
 SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
 xrdb -merge $COLOR
 paintee
