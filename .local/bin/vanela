@@ -43,7 +43,7 @@ PANEL_HEIGHT=72
 PANEL_WIDTH=2356
 PANEL_HORIZONTAL_OFFSET=742
 PANEL_VERTICAL_OFFSET=12
-PANEL_FONT="NotoSans:size=10"
+PANEL_FONT="NotoSans:style=Bold:size=10"
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_WM_NAME=bspwm_panel
 COLOR_DEFAULT_FG="$FOREGROUND"
@@ -96,7 +96,8 @@ while read -r line ; do
 	case $line in
 		S*)
 			# clock output
-			sys="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
+			# Use pure black 0x000000 instead of COLOR_SYS_FG
+			sys="%{F#000000}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
 			;;
 		T*)
 			# xtitle output
