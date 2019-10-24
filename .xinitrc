@@ -44,6 +44,7 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export RCRC=${XDG_CONFIG_HOME}/rcrc
 
 export BROWSER=firefox
+export MPD_MUSIC_DIRECTORY="/media/Entertainment/Music Museum/MyMusic"
 
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin
 

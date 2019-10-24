@@ -1,5 +1,5 @@
 [mpd]
-mpd_music_dir = "/run/media/hacker/media/musik/"
+mpd_music_dir = "/media/Entertainment/Music Museum/MyMusic"
 mpd_host = localhost
 mpd_port = 6600
 mpd_crossfade_time = 2
@@ -42,6 +42,7 @@ main_window_color = default
 centered_cursor = yes
 enable_window_title = yes
 external_editor = vim
+ncmpcpp_directory = "/home/hacker/.local/share/ncmpcpp"
 
 [notification]
 execute_on_song_change = notify-send "Now Playing ♫" "$(mpc current)"
