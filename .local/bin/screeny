@@ -5,4 +5,4 @@
 # Then open the result instantly using Viewnior
 
 scrot 'Cheese_%y.%m.%d_%H.%M.%S.png' \
--e 'mv $f ~/Pictures ; viewnior ~/Pictures/$f'
+-e 'mv $f ~/pics ; viewnior ~/pics/$f'
