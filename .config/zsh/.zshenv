@@ -53,7 +53,10 @@ export MOST_INITFILE=$XDG_CONFIG_HOME/most/.mostrc
 export WGETRC=$XDG_CONFIG_HOME/wget/.wgetrc
 
 # Default weechat config directory
-export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat/
+export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
+
+# Default btpd data home directory
+export BTPD_HOME=$XDG_DATA_HOME/btpd
 
 # Default less pager history file
 export LESSHISTFILE=$XDG_CACHE_HOME/less/lesshst

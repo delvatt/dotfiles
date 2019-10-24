@@ -6,7 +6,6 @@
 .dbus/
 .local/share
 .ssh/
-.btpd/
 .fzf*
 .space-vim/
 .config/weechat/logs/
