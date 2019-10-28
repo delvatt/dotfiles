@@ -1,7 +1,6 @@
 .opt/
 .oh-my-zsh/
 .vim/
-.fonts/
 .cache/
 .dbus/
 .local/share
