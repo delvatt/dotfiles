@@ -39,21 +39,22 @@
 *.geometry:			84x22
 
 ! perl extensions
-URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common:	default,url-select,keyboard-select
 URxvt.perl-lib:         /home/hacker/.local/share/urxvt/ext/
 
 ! macros for clipboard and selection
-URxvt.copyCommand:		xclip -i -selection clipboard
-URxvt.pasteCommand:		xclip -o -selection clipboard
-URxvt.keysym.M-c:		perl:clipboard:copy
-URxvt.keysym.M-v:		perl:clipboard:paste
-URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape:  perl:keyboard-select:activate
-URxvt.keysym.M-s:		perl:keyboard-select:search
-URxvt.keysym.M-u:		perl:url-select:select_next
-URxvt.urlLauncher:		firefox
-URxvt.underlineURLs:	true
-URxvt.urlButton:		1
+URxvt.copyCommand:                  	xclip -i -selection clipboard
+URxvt.pasteCommand:                 	xclip -o -selection clipboard
+URxvt.keysym.M-c:                   	eval:selection_to_clipboard
+URxvt.keysym.M-v:                   	eval:paste_clipboard
+URxvt.keysym.M-V:			eval:paste_primary
+URxvt.keysym.M-Escape:			perl:keyboard-select:activate
+URxvt.keysym.M-s:			perl:keyboard-select:search
+URxvt.keysym.M-u:			perl:url-select:select_next
+URxvt.urlLauncher:			firefox
+URxvt.underlineURLs:			true
+URxvt.urlButton:			1
+URxvt.keyboard-select.clipboard:	true
 
 ! scroll one line
 *.keysym.Shift-Up:		command:\033]720;1\007
