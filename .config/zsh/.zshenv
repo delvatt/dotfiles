@@ -39,7 +39,7 @@ umask 022
 # Ne pas passer par le proxy pour les domaines locaux
 #export no_proxy="exemple.org"
 
-# De la couleur pour grep
+#DEPRECATED! De la couleur pour grep
 #export GREP_OPTIONS='--color=auto'
 
 # Python's pipenv to be created always inside project's root folder.
