@@ -4,5 +4,5 @@
 # Then add date to the file name
 # Then open the result instantly using Viewnior
 
-scrot 'Cheese_%y.%m.%d_%H.%M.%S.png' \
--e 'mv $f ~/pics ; viewnior ~/pics/$f'
+scrot 'cheese_%y.%m.%d_%H.%M.%S.png' \
+-e 'mv $f ~/pics/screenshots ; viewnior ~/pics/screenshots/$f'
