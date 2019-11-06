@@ -83,7 +83,7 @@ bspc rule -a stalonetray state=floating manage=off
 ## Autostart
 xsetroot -cursor_name left_ptr
 xbacklight -set 10
-xset fp+ ~/.fonts/misc
+xset fp+ $XDG_DATA_HOME/fonts/misc
 killall -9 sxhkd vanela xsettingsd dunst
 sxhkd &
 vanela &
