@@ -49,6 +49,9 @@ export PIPENV_VENV_IN_PROJECT=1
 # Default most pager config file
 export MOST_INITFILE=$XDG_CONFIG_HOME/most/.mostrc
 
+# Default gtk2  config file
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+
 # Default wget config file
 export WGETRC=$XDG_CONFIG_HOME/wget/.wgetrc
 
