@@ -16,7 +16,7 @@ getcolors () {
 	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
-xrdb ~/.Xresources
+xrdb $XDG_CONFIG_HOME/X11/Xresources
 COLOR=$(shuf -n1 -e $XDG_CONFIG_HOME/colors/*)
 SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
 xrdb -merge $COLOR
