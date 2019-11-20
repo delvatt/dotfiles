@@ -13,15 +13,19 @@ super + d
 ## Launch common apps
 super + shift + {f,w,g}
 	{thunar,firefox,geany}
-	
+
 ## Take a screenshot
 Print
 	screeny
-	
+
+## Display backlight control
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc 10,-dec 10}
+
 ## Volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer {-q set Master 5%+,-q set Master 5%-,set Master toggle}
-	
+
 ## Music control
 XF86Audio{Next,Prev,Play,Stop}
 	mpc {next,prev,toggle,stop}
@@ -53,7 +57,7 @@ alt + F4
 ## Fullscreen / Monocle
 super + f
 	bspc desktop -l next
-	
+
 ## Split horizontal, split vertical, or cancel
 super + {h,v,r}
 	bspc node -p {east,south,cancel}
@@ -89,11 +93,11 @@ super + {_,shift + }{1-6}
 ## Expanding windows
 super + control + {Left,Right,Up,Down}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
-	
+
 ## Shrinking windows
 super + alt + {Left,Right,Up,Down}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
-	
+
 ## Move floating windows
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
