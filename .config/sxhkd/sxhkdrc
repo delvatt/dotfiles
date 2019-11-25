@@ -20,7 +20,7 @@ Print
 
 ## Display backlight control
 XF86MonBrightness{Up,Down}
-    xbacklight {-inc 10,-dec 10}
+    xbacklight {-inc 5,-dec 5}
 
 ## Volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
