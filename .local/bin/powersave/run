@@ -1,0 +1,78 @@
+#!/bin/sh
+#
+# Things to make battery life better
+#
+# Author: Elvis Attro <attroelvis@gmail.com>
+# Date: November 29, 2019
+# License: MIT
+
+set -e
+
+# VM writeback timeout
+echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+
+# NMI watchdog should be turned off
+echo 0 > /proc/sys/kernel/nmi_watchdog
+
+# Runtime PM for I2C Adapter i2c-1 (i915 gmbus dpb)
+echo auto > /sys/bus/i2c/devices/i2c-1/device/power/control
+
+# Runtime PM for I2C Adapter i2c-2 (i915 gmbus dpd)
+echo auto > /sys/bus/i2c/devices/i2c-2/device/power/control
+
+# Autosuspend for USB device Goodix Fingerprint Device  [HTMicroelectronics]
+echo auto > /sys/bus/usb/devices/1-10/power/control
+
+# Runtime PM for I2C Adapter i2c-0 (i915 gmbus dpc)
+echo auto > /sys/bus/i2c/devices/i2c-0/device/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP Thermal subsystem
+echo auto > /sys/bus/pci/devices/0000:00:14.2/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PMC
+echo auto > /sys/bus/pci/devices/0000:00:1f.2/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point LPC Controller/eSPI Controller
+echo auto > /sys/bus/pci/devices/0000:00:1f.0/power/control
+
+# Runtime PM for PCI Device Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter
+echo auto > /sys/bus/pci/devices/0000:02:00.0/power/control
+
+# Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader
+echo auto > /sys/bus/pci/devices/0000:01:00.0/power/control
+
+# Runtime PM for PCI Device Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem
+echo auto > /sys/bus/pci/devices/0000:00:04.0/power/control
+
+# Runtime PM for PCI Device Toshiba Corporation Device 0116
+echo auto > /sys/bus/pci/devices/0000:6e:00.0/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP HD Audio
+echo auto > /sys/bus/pci/devices/0000:00:1f.3/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #5
+echo auto > /sys/bus/pci/devices/0000:00:1c.4/power/control
+
+# Runtime PM for PCI Device Intel Corporation UHD Graphics 620
+echo auto > /sys/bus/pci/devices/0000:00:02.0/power/control
+
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller
+echo auto > /sys/bus/pci/devices/0000:00:14.0/power/control
+
+# Runtime PM for PCI Device Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
+echo auto > /sys/bus/pci/devices/0000:00:00.0/power/control
+
+# Wake-on-lan status for device wlp2s0
+echo enabled > /sys/class/net/wlp2s0/device/power/wakeup
+
+# Wake status for USB device 1-7
+echo enabled > /sys/bus/usb/devices/1-7/power/wakeup
+
+# Wake status for USB device usb1
+echo enabled > /sys/bus/usb/devices/usb1/power/wakeup
+
+# Wake status for USB device 1-10
+echo enabled > /sys/bus/usb/devices/1-10/power/wakeup
+
+# Wake status for USB device usb2
+echo enabled > /sys/bus/usb/devices/usb2/power/wakeup
