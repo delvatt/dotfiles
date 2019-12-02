@@ -58,7 +58,7 @@ bspc rule -a Transmission-gtk desktop='^2' follow=on focus=on
 bspc rule -a Thunar desktop='^3' follow=on focus=on
 bspc rule -a File-roller desktop='^3' follow=on focus=on
 # 4 > office
-declare -a office=(Geany Gucharmap zathura \
+declare -a office=(Geany Gucharmap Zathura \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
