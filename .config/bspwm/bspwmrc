@@ -49,22 +49,22 @@ bspc config left_padding 8
 ## Window rules
 # remove all rules first
 bspc rule -r *:*
+
 # 1 > terminal
 bspc rule -a URxvt desktop='^1' follow=on focus=on
 # 2 > web
 bspc rule -a Firefox desktop='^2' follow=on focus=on
 bspc rule -a Transmission-gtk desktop='^2' follow=on focus=on
 # 3 > file
-bspc rule -a Thunar desktop='^3' follow=on focus=on
 bspc rule -a File-roller desktop='^3' follow=on focus=on
 # 4 > office
-declare -a office=(Geany Gucharmap Zathura \
+declare -a office=(Gucharmap \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
 # 5 > media
-declare -a media=(Audacity mpv Gimp Gimp-2.8)
+declare -a media=(Audacity mpv Gimp)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 # 6 > settings

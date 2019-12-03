@@ -11,8 +11,8 @@ super + d
     rofia
 
 ## Launch common apps
-super + shift + {f,w,g}
-	{thunar,firefox,geany}
+super + shift + w
+    firefox
 
 ## Take a screenshot
 Print
