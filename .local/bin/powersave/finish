@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Script to undo power saving (makes battery life worse),
-# based on powertop's tunables tab recommandations.
+# based on Intel's powertop tunables tab recommandations.
 #
 # It consists on turning on/toggling devices modes,
 # mostly exposed through kernel interfaces (proc, sys),
@@ -19,66 +19,17 @@ echo 500 > /proc/sys/vm/dirty_writeback_centisecs
 # Enable NMI watchdog
 echo 1 > /proc/sys/kernel/nmi_watchdog
 
-# Runtime PM for I2C Adapter i2c-1 (i915 gmbus dpb)
-echo on > /sys/bus/i2c/devices/i2c-1/device/power/control
-
-# Runtime PM for I2C Adapter i2c-2 (i915 gmbus dpd)
-echo on > /sys/bus/i2c/devices/i2c-2/device/power/control
+# Runtime PM for I2C Adapters i2c-0, i2c-1, i2c-2 (i915 gmbus dpc)
+echo on | tee /sys/bus/i2c/devices/i2c-{0,1,2}/device/power/control > /dev/null 2>&1 || true
 
 # Autosuspend for USB device Goodix Fingerprint Device  [HTMicroelectronics]
 echo on > /sys/bus/usb/devices/1-10/power/control
 
-# Runtime PM for I2C Adapter i2c-0 (i915 gmbus dpc)
-echo on > /sys/bus/i2c/devices/i2c-0/device/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP Thermal subsystem
-echo on > /sys/bus/pci/devices/0000:00:14.2/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PMC
-echo on > /sys/bus/pci/devices/0000:00:1f.2/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point LPC Controller/eSPI Controller
-echo on > /sys/bus/pci/devices/0000:00:1f.0/power/control
-
-# Runtime PM for PCI Device Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter
-echo on > /sys/bus/pci/devices/0000:02:00.0/power/control
-
-# Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader
-echo on > /sys/bus/pci/devices/0000:01:00.0/power/control
-
-# Runtime PM for PCI Device Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem
-echo on > /sys/bus/pci/devices/0000:00:04.0/power/control
-
-# Runtime PM for PCI Device Toshiba Corporation Device 0116
-echo on > /sys/bus/pci/devices/0000:6e:00.0/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP HD Audio
-echo on > /sys/bus/pci/devices/0000:00:1f.3/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #5
-echo on > /sys/bus/pci/devices/0000:00:1c.4/power/control
-
-# Runtime PM for PCI Device Intel Corporation UHD Graphics 620
-echo on > /sys/bus/pci/devices/0000:00:02.0/power/control
-
-# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller
-echo on > /sys/bus/pci/devices/0000:00:14.0/power/control
-
-# Runtime PM for PCI Device Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
-echo on > /sys/bus/pci/devices/0000:00:00.0/power/control
-
+# Runtime PM for various PCI Devices
+echo on | tee /sys/bus/pci/devices/0000:{00:14.0,00:14.2,00:1f.2,00:1f.0,02:00.0,01:00.0,00:04.0,6e:00.0,00:1f.3,00:1c.4,00:02.0,00:00.0}/power/control > /dev/null 2>&1 || echo true
 
 # Wake-on-lan status for device wlp2s0
 echo disabled > /sys/class/net/wlp2s0/device/power/wakeup
 
-# Wake status for USB device 1-7
-echo disabled > /sys/bus/usb/devices/1-7/power/wakeup
-
-# Wake status for USB device usb1
-echo disabled > /sys/bus/usb/devices/usb1/power/wakeup
-
-# Wake status for USB device 1-10
-echo disabled > /sys/bus/usb/devices/1-10/power/wakeup
-
-# Wake status for USB device usb2
-echo disabled > /sys/bus/usb/devices/usb2/power/wakeup
+# Wake status for various USB devices
+echo disabled | tee /sys/bus/usb/devices/{1-7,usb1,usb2,1-10}/power/wakeup > /dev/null 2>&1 || true
