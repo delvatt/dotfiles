@@ -7,6 +7,9 @@ export VISUAL=vim
 export EDITOR=vim
 export PAGER=most
 
+# Load ssh-agent environment variables.
+ . ~/.ssh/ssh-agent-env &> /dev/null
+
 # Default zsh config files directory 
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
