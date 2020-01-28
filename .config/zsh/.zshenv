@@ -50,6 +50,10 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 #Default python interpreter history file
 export PYTHONHISTORY=$XDG_CACHE_HOME/python/python_history
 
+
+# Default vagrant home directory
+export VAGRANT_HOME=/mnt/home/hacker/.vagrant.d
+
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
 export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.0
