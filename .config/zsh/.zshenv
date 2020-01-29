@@ -47,8 +47,12 @@ export LESSHISTFILE=$XDG_CACHE_HOME/less/lesshst
 # Default tmux runtime directory
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
-#Default python interpreter history file
+# Default python interpreter history file
 export PYTHONHISTORY=$XDG_CACHE_HOME/python/python_history
+
+# Default Ruby's Gem directores
+export GEM_HOME="$XDG_DATA_HOME"/gem
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 
 
 # Default vagrant home directory
