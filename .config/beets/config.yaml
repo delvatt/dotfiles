@@ -1,0 +1,11 @@
+directory: "/media/Entertainment/Music Museum/MyMusic"  # Where does the music live?
+library: ~/.local/share/beets/library.db          # Where does the beets database live?
+import:
+    move: yes                                           # Move your files to Music dir after import
+plugins: lastgenre fetchart ftintitle mpdupdate smartplaylist random embedart
+embedart:
+    auto: yes                                           # Embed album art in the music files
+
+mpdupdate:
+    host: localhost
+    port: 6600

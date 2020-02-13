@@ -2,6 +2,10 @@
 # Actually, this file here ~/.zshenv is symlinked to $XDG_CONFIG_HOME/zsh/.zshenv,
 # to comply to the XDG specification.
 
+# rw-r--r-- permissions for any new created file
+# and rwxr-xr-x for any new created folder.
+umask 022
+
 # Default Viewer/Editor/Pager (for Crontab, CVS,...)
 export VISUAL=vim
 export EDITOR=vim
@@ -18,10 +22,6 @@ export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 
 # Default zsh completion dump file
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
-
-# rw-r--r-- permissions for any new created file
-# and rwxr-xr-x for any new created folder. 
-umask 022
 
 # Python's pipenv to be created always inside project's root folder.
 export PIPENV_VENV_IN_PROJECT=1
