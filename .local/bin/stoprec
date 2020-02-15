@@ -1,6 +1,1 @@
-#!/bin/bash
-
-# Command to stop screenrecording
-# I usually launch this using rofi
-
-killall -9 ffmpeg
+/home/hacker/code/scripts/stoprec

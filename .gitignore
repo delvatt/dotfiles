@@ -4,9 +4,12 @@
 .cache/
 .dbus/
 .local/share
+.local/lib
+.local/bin
 .ssh/
 .fzf*
 .space-vim/
+.config/beets/state.pickle
 .config/weechat/logs/
 .config/weechat/weechat.log
 .config/viewnior/
