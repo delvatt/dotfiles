@@ -12,7 +12,7 @@
 "
 "   Author: Liu-Cheng Xu <xuliuchengxlc@gmail.com>
 "   URL: https://github.com/liuchengxu/space-vim
-"   License: MIT
+"   License: MIT.
 
 scriptencoding utf-8
 

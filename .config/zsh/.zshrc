@@ -122,7 +122,7 @@ bindkey -s '^o' 'lfcd\n'
 #alias vi="\vim"
 
 # Alias for managing local dotfiles git bare repository.
-#alias dotfiles='/usr/bin/git --git-dir=/home/hacker/.dotfiles/ --work-tree=/home/hacker/'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Start tmux with custom configuration file. 
 alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/.tmux.conf'
