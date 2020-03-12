@@ -32,11 +32,19 @@ export LC_ALL=en_US.UTF-8
 # Default xinit config file
 #export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
-#XDG Base Directory Specification
+# XDG Base Directory Specification
+# System dirs
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 export RCRC=${XDG_CONFIG_HOME}/rcrc
+
+# User dirs
+export XDG_DOWNLOAD_DIR="$HOME/dl"
+export XDG_DOCUMENTS_DIR="$HOME/docs"
+export XDG_MUSIC_DIR="$HOME/sds"
+export XDG_PICTURES_DIR="$HOME/pics"
+export XDG_VIDEOS_DIR="$HOME/vids"
 
 export BROWSER=firefox
 export MPD_MUSIC_DIRECTORY="/media/Entertainment/Music Museum/MyMusic"
