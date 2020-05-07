@@ -23,9 +23,6 @@ export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 # Default zsh completion dump file
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
-# Python's pipenv to be created always inside project's root folder.
-export PIPENV_VENV_IN_PROJECT=1
-
 # Default most pager config file
 export MOST_INITFILE=$XDG_CONFIG_HOME/most/.mostrc
 
