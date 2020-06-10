@@ -1,10 +1,10 @@
 ## Launch terminal
 super + Return
-	urxvt
+	st
 
 ## Drawing terminal
 super + shift + Return
-	urdraw
+	st &
 
 ## Launch Rofi start menu
 super + d
