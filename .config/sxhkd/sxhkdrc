@@ -2,10 +2,6 @@
 super + Return
 	st
 
-## Drawing terminal
-super + shift + Return
-	st &
-
 ## Launch Rofi start menu
 super + d
     rofia
