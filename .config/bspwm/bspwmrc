@@ -85,11 +85,12 @@ bspc rule -a stalonetray state=floating manage=off
 xsetroot -cursor_name left_ptr
 xbacklight -set 10
 xset fp+ $XDG_DATA_HOME/fonts/misc
-killall -9 sxhkd vanela xsettingsd redshift dunst
+killall -9 sxhkd vanela xsettingsd redshift xbanish dunst
 sxhkd &
 vanela &
 xsettingsd &
 redshift &
+xbanish -i shift -i control -i mod1 -i mod4 &
 WALLPAPER=$(shuf -n1 -e ~/pics/.wallpaper/*)
 SHORTWALLPAPER=$(echo $WALLPAPER | sed "s@.*/@@" | sed "s/\..*$//")
 ls ~/pics/.wallpaper | sort -R | tail -$N | while read file; do # useless animation
