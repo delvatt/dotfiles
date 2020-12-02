@@ -57,6 +57,12 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 # Default vagrant home directory
 export VAGRANT_HOME=/mnt/home/hacker/.vagrant.d
 
+# Go modules & packages
+export GOPATH=/home/hacker/.opt/go
+
+# GO binaries
+export GOBIN=/home/hacker/.local/bin
+
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export TEXLIVE_HOME=/opt/texlive/2020/bin/x86_64-linux
 export GRADLE_HOME=/usr/local/gradle/gradle-5.0
@@ -64,4 +70,3 @@ export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.0
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
 export PATH=$PATH:$TEXLIVE_HOME
 #export PATH=$PATH:$GRADLE_HOME/bin:$MAVEN_HOME/bin
-#export PATH="$(yarn global bin):$PATH"
