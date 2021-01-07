@@ -8,6 +8,9 @@ export ZSH=~/.opt/oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Uncomment the following line to controls whether the prompt is redrawn when switching to a different input mode.
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
