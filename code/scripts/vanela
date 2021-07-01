@@ -44,7 +44,9 @@ PANEL_WIDTH=2356
 PANEL_HORIZONTAL_OFFSET=742
 PANEL_VERTICAL_OFFSET=12
 PANEL_FONT="NotoSans:size=12"
-PANEL_ICON_FONT="FontAwesome-10"
+# PANEL_ICON_FONT="FontAwesome-10"
+# PANEL_FONT="FiraCode Nerd Font:size=12"
+PANEL_ICON_FONT="FiraCode Nerd Font:size=12"
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_WM_NAME=bspwm_panel
 COLOR_DEFAULT_FG="$FOREGROUND"
@@ -76,8 +78,8 @@ COLOR_SYS_BG="$RED"
 mkfifo "$PANEL_FIFO"
 
 icon() {
-  # echo -n -e "%{F$pIcon}\u$1 %{F$pFG}"
-  echo -n -e "%{F$pIcon}\u$1 %{F$pFG}"
+  echo -n -e "%{F#000000}\u$1"
+  # echo -n -e "%{F#000000}\u$1%{F-}"
 }
 
 get_date() {
@@ -87,7 +89,7 @@ get_date() {
 get_bat() {
   BATC=/sys/class/power_supply/BAT0/capacity
   BATS=/sys/class/power_supply/BAT0/status
-  # icon f0e7
+  icon f0e7
   if [ -f $BATC ]; then
     [ "`cat $BATS`" = "Charging" ] && echo -n '+' || echo -n '-'
     cat $BATC
@@ -102,25 +104,9 @@ get_vol() {
     command='termite -e "alsamixer"' echo ${AC}$command${AB}$display${AE}
 }
 
-get_ntwk() {
-    read lo int1 int2 <<< `ip link | sed -n 's/^[0-9]: \(.*\):.*$/\1/p'`
-    if iwconfig $int1 >/dev/null 2>&1; then
-        wifi=$int1
-        eth0=$int2
-    else
-        wifi=$int2
-        eth0=$int1
-    fi
-    ip link show $eth0 | grep 'state UP' >/dev/null && int=$eth0 ||int=$wifi
-    icon f0ac
-    echo $int
-    ping -W 1 -c 1 8.8.8.8 >/dev/null 2>&1 &&
-        echo -e '\uf00c' || echo -e '\uf00d'
-}
-
 get_status() {
   while true; do
-    echo "$(get_date) $(get_bat)"
+    echo -e "$(get_date)  $(get_vol)  $(get_bat)"
     sleep 30
   done
 }
