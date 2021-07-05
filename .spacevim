@@ -50,4 +50,6 @@ function! UserConfig()
   " It is good for airline layer.
   " let g:airline_powerline_fonts = 1
 
+  noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
+
 endfunction
