@@ -89,14 +89,16 @@ get_date() {
 get_bat() {
   BATC=/sys/class/power_supply/BAT0/capacity
   BATS=/sys/class/power_supply/BAT0/status
-  icon f0e7
   if [ -f $BATC ]; then
-    [ "`cat $BATS`" = "Charging" ] && echo -n '+' || echo -n '-'
-    cat $BATC
+    BATC=$(cat $BATC)
+    BATS=$(cat $BATS)
+    [[ "$BATS" == "Charging" ]] && stat_icon=f0e7 || stat_icon=0020
+    display="$(icon "$stat_icon")$(icon f578) $BATC%"
   else
     #no battery information found.
-    echo '+-??'
+    display="$(icon f582)"
   fi
+  echo "$display"
 }
 
 get_vol() {
@@ -107,7 +109,7 @@ get_vol() {
 get_status() {
   while true; do
     echo -e "$(get_date)  $(get_vol)  $(get_bat)"
-    sleep 30
+    sleep 20
   done
 }
 
