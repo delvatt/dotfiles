@@ -93,7 +93,20 @@ get_bat() {
     BATC=$(cat $BATC)
     BATS=$(cat $BATS)
     [[ "$BATS" == "Charging" ]] && stat_icon=f0e7 || stat_icon=0020
-    display="$(icon "$stat_icon")$(icon f578) $BATC%"
+    if (( "$BATC" <= 100 && "$BATC" > 90 )); then
+      capacity_icon=f578
+    elif (( "$BATC" <= 90 && "$BATC" > 70 )); then
+      capacity_icon=f581
+    elif (( "$BATC" <= 70 && "$BATC" > 50 )); then
+      capacity_icon=f57f
+    elif (( "$BATC" <= 50 && "$BATC" > 30 )); then
+      capacity_icon=f57d
+    elif (( "$BATC" <= 30 && "$BATC" > 10 )); then
+      capacity_icon=f57b
+    else
+      capacity_icon=f579
+    fi
+    display="$(icon "$stat_icon")$(icon "$capacity_icon") $BATC%"
   else
     #no battery information found.
     display="$(icon f582)"
@@ -243,7 +256,7 @@ panel_bar < "$PANEL_FIFO" | lemonbar -a 12 \
   -f "$PANEL_FONT"  -f "$PANEL_ICON_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" -n "$PANEL_WM_NAME" | bash &
 
 sleep 0.5
-# Trigger the PANEL_FIFO to make it instantly refreshed after bspwmrc reloaded 
+# Trigger the PANEL_FIFO to make it instantly refreshed after bspwmrc reloaded
 echo "dummy" > "$PANEL_FIFO"
 
 sleep 0.5
