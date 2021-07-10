@@ -50,6 +50,8 @@ function! UserConfig()
   " It is good for airline layer.
   " let g:airline_powerline_fonts = 1
 
+  " Completor.vim actions
   noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
+  noremap <silent> <LocalLeader>b :call completor#do('doc')<CR>
 
 endfunction
