@@ -23,12 +23,12 @@ getcolors () {
   BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
   BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
   RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
-  GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+  # GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
   YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
   BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
-  MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+  # MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
   CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
-  WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+  # WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
 
 # Only use the function above if the cache of paintee couldn't be found
@@ -71,7 +71,7 @@ COLOR_STATE_FG="$BACKGROUND"
 COLOR_STATE_BG="$BACKGROUND"
 COLOR_TITLE_FG="$FOREGROUND"
 COLOR_TITLE_BG="$BACKGROUND"
-COLOR_SYS_FG="$FOREGROUND"
+# COLOR_SYS_FG="$FOREGROUND"
 COLOR_SYS_BG="$RED"
 
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
