@@ -116,7 +116,7 @@ get_bat() {
 
 get_vol() {
     display="$(icon f028) $(amixer get Master | sed -n 's/^.*\[\([0-9]\+%\).*$/\1/p')"
-    command='termite -e "alsamixer"' echo ${AC}$command${AB}$display${AE}
+    echo "$display"
 }
 
 get_status() {
