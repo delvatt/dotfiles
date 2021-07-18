@@ -172,7 +172,7 @@ panel_bar() {
                   on_focused_monitor=1
                   ;;
               esac
-              [ $num_mon -lt 2 ] && shift && continue
+              [ "$num_mon" -lt 2 ] && shift && continue
               wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
               ;;
             [fFoOuU]*)
