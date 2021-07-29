@@ -33,7 +33,7 @@ getcolors () {
 
 # Only use the function above if the cache of paintee couldn't be found
 if [ -e ~/.cache/paintee ]; then
-  . ~/.cache/paintee
+  source /home/hacker/.cache/paintee
 else
   getcolors
 fi
@@ -152,7 +152,7 @@ panel_bar() {
         # workspaces output
         wm=
         IFS=':'
-        set -- "${line#?}"
+        set -- ${line#?}
         while [ $# -gt 0 ] ; do
           item=$1
           name=${item#?}
