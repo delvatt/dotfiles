@@ -1,0 +1,125 @@
+/** Basic config file **/
+
+configuration {
+}
+
+* {
+	background:                      #263238;
+	bordercolor:                     #4d5066;
+	separatorcolor:                  #263238;
+	normal-background:               #263238;
+	normal-foreground:               #f5f5f0;
+	alternate-normal-background:     #263238;
+	selected-normal-background:      #263238;
+	selected-normal-foreground:      #ba68c8;
+	active-background:               #263238;
+	active-foreground:               #f48fb1;
+	alternate-active-background:     #263238;
+	selected-active-background:      #263238;
+	selected-active-foreground:      #ba68c8;
+	urgent-background:               #263238;
+	urgent-foreground:               #ff7043;
+	alternate-urgent-background:     #263238;
+	selected-urgent-background:      #263238;
+	selected-urgent-foreground:      #ba68c8;
+	alternate-normal-foreground:     @normal-foreground;
+	alternate-urgent-foreground:     @urgent-foreground;
+	alternate-active-foreground:     @active-foreground;
+	foreground:                      @normal-foreground;
+}
+
+
+* {
+    spacing:    2;
+    border-color: @foreground;
+    background-color: transparent;
+}
+
+window {
+    background:                     @background;
+    foreground:                     @foreground;
+
+    height:                         30%;
+    width:                          50%;
+    border:               			2;
+    border-color:                   @bordercolor;
+    location:                       0;
+    font:                           "DejaVu Sans 32";
+    padding:                        24;
+    separator-color:                @separatorcolor;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border:  1px dash 0px 0px ;
+    padding: 2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+
+#textbox {
+    text-color: @foreground;
+}
+
+listview {
+    column:                         3;
+    lines:                          12;
+    scrollbar:                      false;
+    border-color:                   @separatorcolor;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    padding:      2px 0px 0px ;
+}
+
+#element {
+    border: 0;
+}
+#element normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+#element normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+#element normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+}
+#element selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+#element selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+#element selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+#element alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+#element alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+#element alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+}
+
+#button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#inputbar, case-indicator, entry, prompt, button {
+    spacing: 0;
+    text-color:      @normal-foreground;
+}
