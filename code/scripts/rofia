@@ -1,7 +1,8 @@
 #!/bin/bash
-
+j
 # A messy & pathetic script to launch rofi with xrdb colours
 # Cheers! addy
+# Edited by Elvis D. Attro.
 
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
@@ -25,23 +26,4 @@ fi
 
 # Launch rofi with custom configuration
 rofi -show drun -sidebar-mode \
--modi run,drun,window \
--hide-scrollbar true \
--bw 2 \
--lines 12 \
--padding 24 \
--width 60 \
--location 0 \
--columns 3 \
--font "DejaVu Sans 32" \
--color-enabled true \
--color-window "$BACKGROUND,$BLACK,$BACKGROUND" \
--color-normal "$BACKGROUND,$FOREGROUND,$BACKGROUND,$BACKGROUND,$BLUE" \
--color-active "$BACKGROUND,$MAGENTA,$BACKGROUND,$BACKGROUND,$BLUE" \
--color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND,$BACKGROUND,$BLUE"
-
-# Theming help
-# color window = background, border, separator
-# color normal = background, foreground, background-alt, highlight-background, highlight-foreground
-# color active = background, foreground, background-alt, highlight-background, highlight-foreground
-# color urgent = background, foreground, background-alt, highlight-background, highlight-foreground
+-modi run,drun,window
