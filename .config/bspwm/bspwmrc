@@ -4,18 +4,8 @@
 #export PATH="${PATH}:$HOME/.config/bspwm"
 
 ## Coloring
-getcolors () {
-	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
-	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
-	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
-	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
-	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
-	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
-	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
-	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
-	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
-	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
-}
+source ~/code/scripts/getcolors
+
 xrdb $XDG_CONFIG_HOME/X11/Xresources
 COLOR=$(shuf -n1 -e $XDG_CONFIG_HOME/colors/*)
 SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
