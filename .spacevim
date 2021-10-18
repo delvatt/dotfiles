@@ -51,7 +51,6 @@ function! UserConfig()
   " let g:airline_powerline_fonts = 1
 
   " Completor.vim actions
-  noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
-  noremap <silent> <LocalLeader>b :call completor#do('doc')<CR>
-
+  autocmd FileType python noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
+  autocmd FileType python noremap <silent> <LocalLeader>b :call completor#do('doc')<CR>
 endfunction
