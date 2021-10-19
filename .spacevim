@@ -14,7 +14,7 @@ let g:spacevim_layers = [
       \ 'go', 'c-c++', 'python', 'java',
       \ 'javascript', 'typescript', 'vue',
       \ 'html', 'markdown', 'latex',
-      \ 'fzf', 'unite', 'auto-completion',
+      \ 'fzf', 'auto-completion',
       \ 'editing', 'formatting', 'programming', 'syntax-checking',
       \ 'code-snippets', 'better-defaults', 'which-key']
 
