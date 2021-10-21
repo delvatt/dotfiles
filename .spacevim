@@ -51,6 +51,11 @@ function! UserConfig()
   " let g:airline_powerline_fonts = 1
 
   " Completor.vim actions
+  " Go to definition
   autocmd FileType python noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
   autocmd FileType python noremap <silent> <LocalLeader>b :call completor#do('doc')<CR>
+
+  " vim-go actions
+  " Go coveraage
+  autocmd FileType go nmap <silent> <LocalLeader>c <Plug>(go-coverage-toggle)
 endfunction
