@@ -67,4 +67,8 @@ function! UserConfig()
 
   " Go alternate edit
   au Filetype go nmap <silent> <LocalLeader>a <Plug>(go-alternate-edit)
+
+  " Go decalarations 
+  au Filetype go nnoremap <silent> <LocalLeader>dd :GoDeclsDir<CR>
+  au Filetype go nnoremap <silent> <LocalLeader>df :GoDecls<CR>
 endfunction
