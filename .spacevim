@@ -71,4 +71,7 @@ function! UserConfig()
   " Go decalarations 
   au Filetype go nnoremap <silent> <LocalLeader>dd :GoDeclsDir<CR>
   au Filetype go nnoremap <silent> <LocalLeader>df :GoDecls<CR>
+
+  " Go signatures & types info
+  au FileType go nmap <silent> <LocalLeader>s <Plug>(go-info)
 endfunction
