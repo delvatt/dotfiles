@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## Environtment
-#export PATH="${PATH}:$HOME/.config/bspwm"
-
 ## Coloring
 source ~/code/scripts/getcolors
 
@@ -84,7 +81,7 @@ xbanish -i shift -i control -i mod1 -i mod4 &
 WALLPAPER=$(shuf -n1 -e ~/pics/.wallpaper/*)
 SHORTWALLPAPER=$(echo $WALLPAPER | sed "s@.*/@@" | sed "s/\..*$//")
 ls ~/pics/.wallpaper | sort -R | tail -$N | while read file; do # useless animation
-	hsetroot -fill ~/pics/.wallpaper/$file -tint '#3c6f86'; sleep 0.1; done
+hsetroot -fill ~/pics/.wallpaper/$file -tint '#3c6f86'; sleep 0.1; done
 hsetroot -fill $WALLPAPER -tint '#9ccfe6'
 dunst \
 -lb "$BACKGROUND" -lf "$FOREGROUND" -lfr "$GREEN" \
