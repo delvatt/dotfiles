@@ -72,8 +72,9 @@ bspc rule -a stalonetray state=floating manage=off
 xsetroot -cursor_name left_ptr
 xbacklight -set 10
 xset fp+ $XDG_DATA_HOME/fonts/misc
-killall -9 sxhkd vanela xsettingsd redshift xbanish dunst
+killall -9 sxhkd picon vanela xsettingsd redshift xbanish dunst
 sxhkd &
+picom -CG &
 vanela &
 xsettingsd &
 redshift &
