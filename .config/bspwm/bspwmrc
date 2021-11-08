@@ -74,7 +74,7 @@ xbacklight -set 10
 xset fp+ $XDG_DATA_HOME/fonts/misc
 killall -9 sxhkd picon vanela xsettingsd redshift xbanish dunst
 sxhkd &
-picom -CG &
+picom -CG --experimental-backends &
 vanela &
 xsettingsd &
 redshift &
