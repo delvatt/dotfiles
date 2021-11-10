@@ -84,4 +84,7 @@ function! UserConfig()
 
   " Go highlight corresponding identifiers
   au FileType go nnoremap <silent> <LocalLeader>st :GoSameIdsToggle<CR>
+
+  " Go rename
+  au FileType go nmap <silent> <LocalLeader>ge <Plug>(go-rename)
 endfunction
