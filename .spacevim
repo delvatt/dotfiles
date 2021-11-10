@@ -50,6 +50,10 @@ function! UserConfig()
   " It is good for airline layer.
   " let g:airline_powerline_fonts = 1
 
+  " Enable lsp for go by using gopls
+  let g:completor_filetype_map = {}
+  let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
+
   " Completor.vim actions
   " Go to definition
   autocmd FileType python noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
