@@ -54,6 +54,9 @@ function! UserConfig()
   let g:completor_filetype_map = {}
   let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
 
+  " Use vim 8.2+ popup windows for documentation
+  let g:go_doc_popup_window = 1
+
   " Completor.vim actions
   " Go to definition
   autocmd FileType python noremap <silent> <LocalLeader>d :call completor#do('definition')<CR>
