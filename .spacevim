@@ -87,4 +87,8 @@ function! UserConfig()
 
   " Go rename
   au FileType go nmap <silent> <LocalLeader>ge <Plug>(go-rename)
+
+  " Go Guru specifics
+  " Guru referrers
+  au FileType go nnoremap <silent> <LocalLeader>gr :GoReferrers<CR>
 endfunction
