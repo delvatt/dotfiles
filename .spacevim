@@ -91,4 +91,7 @@ function! UserConfig()
   " Go Guru specifics
   " Guru referrers
   au FileType go nnoremap <silent> <LocalLeader>gr :GoReferrers<CR>
+
+  " Guru describe
+  au FileType go nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
 endfunction
