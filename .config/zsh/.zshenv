@@ -57,6 +57,10 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 # Default vagrant home directory
 export VAGRANT_HOME=/mnt/home/hacker/.vagrant.d
 
+# Go modules & packages
+# for backward compatibility with old tools still relying GOPATH, e.g guru
+export GOPATH=/home/hacker/.cache/go
+
 # Misc $PATH updates
 export JBOSS_HOME=/home/hacker/.opt/bin/jboss-5.1.0.GA
 export TEXLIVE_HOME=/opt/texlive/2020/bin/x86_64-linux
