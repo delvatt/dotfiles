@@ -38,7 +38,7 @@ bspc config left_padding 8
 bspc rule -r *:*
 
 # 1 > terminal
-bspc rule -a URxvt desktop='^1' follow=on focus=on
+bspc rule -a st desktop='^1' follow=on focus=on
 
 # 2 > web
 bspc rule -a Firefox desktop='^2' follow=on focus=on
