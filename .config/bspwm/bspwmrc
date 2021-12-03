@@ -39,33 +39,33 @@ bspc rule -r *:*
 
 # 1 > terminal
 bspc rule -a URxvt desktop='^1' follow=on focus=on
+
 # 2 > web
 bspc rule -a Firefox desktop='^2' follow=on focus=on
-bspc rule -a Transmission-gtk desktop='^2' follow=on focus=on
+
 # 3 > file
-bspc rule -a File-roller desktop='^3' follow=on focus=on
 # 4 > office
 declare -a office=(Gucharmap \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
+
 # 5 > media
 declare -a media=(Audacity mpv Gimp)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
+
 # 6 > settings
 declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
 System-config-printer.py Pavucontrol Exo-helper-1)
 for i in ${settings[@]}; do
    bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
-bspc rule -a GParted desktop='^6' follow=on focus=on
+
 # special rules
 bspc rule -a Zathura state=tiled follow=on focus=on
-bspc rule -a Audacious state=floating follow=on focus=on
 bspc rule -a Firefox:Places state=floating follow=on focus=on
 bspc rule -a sixv state=tilled follow=on focus=on
-bspc rule -a stalonetray state=floating manage=off
 
 ## Autostart
 xsetroot -cursor_name left_ptr
