@@ -64,7 +64,7 @@ bspc rule -a GParted desktop='^6' follow=on focus=on
 bspc rule -a Zathura state=tiled follow=on focus=on
 bspc rule -a Audacious state=floating follow=on focus=on
 bspc rule -a Firefox:Places state=floating follow=on focus=on
-bspc rule -a Viewnior state=floating follow=on focus=on
+bspc rule -a sixv state=tilled follow=on focus=on
 bspc rule -a stalonetray state=floating manage=off
 
 ## Autostart
