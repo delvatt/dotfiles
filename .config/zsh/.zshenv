@@ -18,10 +18,10 @@ export PAGER=most
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
 # Default zsh history file
-export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
+export HISTFILE=$XDG_DATA_HOME/zsh/zsh_history
 
 # Default zsh completion dump file
-export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+export ZSH_COMPDUMP="$XDG_DATA_HOME/zsh/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 # Default most pager config file
 export MOST_INITFILE=$XDG_CONFIG_HOME/most/.mostrc
