@@ -10,6 +10,9 @@ super + d
 super + shift + w
     firefox
 
+super + shift + z
+    zoom
+
 ## Take a screenshot
 Print
 	screeny
