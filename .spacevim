@@ -103,4 +103,7 @@ function! UserConfig()
 
   " Guru channel peers 
   au FileType go nnoremap <silent> <LocalLeader>gp :GoChannelPeers<CR>
+
+  " Guru callers 
+  au FileType go nnoremap <silent> <LocalLeader>gcr :GoCallers<CR>
 endfunction
