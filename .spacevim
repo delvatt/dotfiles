@@ -106,4 +106,7 @@ function! UserConfig()
 
   " Guru callers 
   au FileType go nnoremap <silent> <LocalLeader>gcr :GoCallers<CR>
+
+  " Guru callees 
+  au FileType go nnoremap <silent> <LocalLeader>gce ::GoCallees<CR>
 endfunction
