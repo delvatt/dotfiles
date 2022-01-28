@@ -101,12 +101,15 @@ function! UserConfig()
   " Guru which errors
   au FileType go nnoremap <silent> <LocalLeader>gx :GoWhicherrs<CR>
 
-  " Guru channel peers 
+  " Guru channel peers
   au FileType go nnoremap <silent> <LocalLeader>gp :GoChannelPeers<CR>
 
-  " Guru callers 
+  " Guru callers
   au FileType go nnoremap <silent> <LocalLeader>gcr :GoCallers<CR>
 
-  " Guru callees 
+  " Guru callees
   au FileType go nnoremap <silent> <LocalLeader>gce ::GoCallees<CR>
+
+  " Guru callstack
+  au FileType go nnoremap <silent> <LocalLeader>gcs ::GoCallstack<CR>
 endfunction
