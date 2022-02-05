@@ -96,7 +96,7 @@ function! UserConfig()
   au FileType go nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
 
   " Guru implements
-  au FileType go nnoremap <silent> <LocalLeader>gi :GoImplements<CR>
+  au FileType go nnoremap <silent> <LocalLeader>gil :GoImplements<CR>
 
   " Guru which errors
   au FileType go nnoremap <silent> <LocalLeader>gx :GoWhicherrs<CR>
