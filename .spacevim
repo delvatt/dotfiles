@@ -112,4 +112,7 @@ function! UserConfig()
 
   " Guru callstack
   au FileType go nnoremap <silent> <LocalLeader>gcs ::GoCallstack<CR>
+
+  " Go interfaces implementation stubs generation
+  au FileType go nnoremap <silent> <LocalLeader>gii :GoImpl<CR>
 endfunction
