@@ -36,6 +36,8 @@ function! UserInit()
   " Add your own plugin via Plug command.
   Plug 'junegunn/seoul256.vim'
 
+  " Splitting and joinning structs.
+  Plug 'AndrewRadev/splitjoin.vim'
 endfunction
 
 " Override the default settings from space-vim as well as adding extras
