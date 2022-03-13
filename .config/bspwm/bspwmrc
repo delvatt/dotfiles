@@ -38,10 +38,10 @@ bspc config left_padding 8
 bspc rule -r *:*
 
 # 1 > terminal
-bspc rule -a st desktop='^1' follow=on focus=on
-
 # 2 > web
-bspc rule -a Firefox desktop='^2' follow=on focus=on
+declare -a web=(firefox-default Chromium)
+for i in ${web[@]}; do
+   bspc rule -a $i desktop='^2' follow=on focus=on; done
 
 # 3 > file
 # 4 > office
@@ -64,7 +64,6 @@ for i in ${settings[@]}; do
 
 # special rules
 bspc rule -a Zathura state=tiled follow=on focus=on
-bspc rule -a Firefox:Places state=floating follow=on focus=on
 bspc rule -a sixv state=tilled follow=on focus=on
 
 ## Autostart
