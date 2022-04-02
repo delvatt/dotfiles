@@ -58,7 +58,7 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export VAGRANT_HOME=/mnt/home/hacker/.vagrant.d
 
 # Go modules & packages
-# for backward compatibility with old tools still relying GOPATH, e.g guru
+# for backward compatibility with old tools still relying on GOPATH, e.g guru
 export GOPATH=/home/hacker/.cache/go
 
 # Misc $PATH updates
