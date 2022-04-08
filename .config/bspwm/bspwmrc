@@ -39,7 +39,7 @@ bspc rule -r *:*
 
 # 1 > terminal
 # 2 > web
-declare -a web=(firefox-default Chromium)
+declare -a web=("Mozilla Firefox" Chromium)
 for i in ${web[@]}; do
    bspc rule -a $i desktop='^2' follow=on focus=on; done
 
