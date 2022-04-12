@@ -336,16 +336,16 @@ Vagrantfile             
 *.ogx   
 
 # audio formats (extensions from dircolors defaults)
-*.aac   
-*.au    
+*.aac   
+*.au    
 *.flac  
 *.m4a   
 *.mid   
 *.midi  
 *.mka   
-*.mp3   
+*.mp3   
 *.mpc   
-*.ogg   
+*.ogg   
 *.ra    
 *.wav   
 *.oga   
