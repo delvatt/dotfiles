@@ -57,8 +57,11 @@ function! UserConfig()
   let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
 
   " Go code analysis and linting options
+  " Set default linter command to golangci-lint
+  let g:go_metalinter_command = "golangci-lint"
+
   " Enable auto |:GoMetaLinter| on save
-  let g:go_metalinter_autosave = 1
+  " let g:go_metalinter_autosave = 1
 
   " Use vim 8.2+ popup windows for documentation
   let g:go_doc_popup_window = 1
