@@ -54,6 +54,9 @@ export PYTHONHISTORY=$XDG_CACHE_HOME/python/python_history
 export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 
+# Default sqlite3 history file
+export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite3/sqlite_history
+
 # Default vagrant home directory
 export VAGRANT_HOME=/mnt/home/hacker/.vagrant.d
 
