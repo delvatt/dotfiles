@@ -60,6 +60,13 @@ source $ZSH/oh-my-zsh.sh
 
 
 # User configuration
+# ZSH History file various configs
+HISTSIZE=500000
+SAVEHIST=500000
+setopt appendhistory
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -124,7 +131,7 @@ bindkey -s '^o' 'lfcd\n'
 #alias vi="\vim"
 
 # Alias for managing local dotfiles git bare repository.
-alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dof='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Start tmux with custom configuration file. 
 alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/.tmux.conf'
