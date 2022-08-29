@@ -167,3 +167,7 @@ alias autoremove="sudo xbps-remove -Oo"
 alias clean="sudo rm -rf /var/cache/xbps/*"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+
+# start tmate with a specified config file
+alias tmate='tmate -f "${XDG_CONFIG_HOME}/tmate/tmate.conf"'
