@@ -1,6 +1,7 @@
 [user]
 	name = Elvis Attro
 	email = attroelvis@gmail.com
+	signingkey = key::ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD0VcHXaQ3WUiHAtl38d4CULBM9RniF08UcvNnpTx0OkIHSHFnhSLIRczweh0RzSYmTXXpCjBU5bA8DhycpPQGiflVkEIPvLyUrsFv9dY985iX/gWplLYf0jgh8Y+KUVP0IqQe8tMu/uEWF+1DzGFHBY56anPiw2sA3ZuwidQ3lbN8bQbdx+X8z5lX7FaWL10vaQM4w5jxRtmIdjxZA9DCes0srEP+nIaQ5XeGJiY8THueuRb/hd+elmgkigtzEzFre7965FBnF+8wuppnC9bXT0H/Q6vRTPmpPf9md2osWtFM+gtb3bAp4WcVBCNSNyAAW20afnSVnAHVl5bOChRh hacker@janis
 [core]
 	editor = vim
 	pager = most
@@ -21,3 +22,7 @@
 	insteadOf = https://github.com/
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
