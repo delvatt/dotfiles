@@ -40,6 +40,30 @@ function! UserInit()
   Plug 'AndrewRadev/splitjoin.vim'
 endfunction
 
+ " Scroll popups function
+function! ScrollPopup(nlines)
+  let winids = popup_list()
+  if len(winids) == 0
+      return
+  endif
+
+  " Ignore hidden popups
+  let prop = popup_getpos(winids[0])
+  if prop.visible != 1
+      return
+  endif
+
+  let firstline = prop.firstline + a:nlines
+  let buf_lastline = str2nr(trim(win_execute(winids[0], "echo line('$')")))
+  if firstline < 1
+      let firstline = 1
+  elseif prop.lastline + a:nlines > buf_lastline
+      let firstline = buf_lastline + prop.firstline - prop.lastline
+  endif
+
+    call popup_setoptions(winids[0], {'firstline': firstline})
+endfunction
+
 " Override the default settings from space-vim as well as adding extras
 function! UserConfig()
 
@@ -65,6 +89,10 @@ function! UserConfig()
 
   " Use vim 8.2+ popup windows for documentation
   let g:go_doc_popup_window = 1
+
+  " Scroll popups keybindings
+  nnoremap <C-j> :call ScrollPopup(3)<CR>
+  nnoremap <C-k> :call ScrollPopup(-3)<CR>
 
   " Completor.vim actions
   " Go to definition
