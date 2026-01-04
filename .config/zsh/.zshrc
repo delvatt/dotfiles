@@ -134,12 +134,21 @@ bindkey -s '^o' 'lfcd\n'
 
 # Alias for vim
 #alias vi="\vim"
+#
+# Alias for yq-go as yq
+alias yq="yq-go"
+
+# Alias for cleaning go generated files
+alias "makeclean"="rm -rf pb/gen/ && rm -rf mocks/"
 
 # Alias for managing local dotfiles git bare repository.
 alias dof='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Start tmux with custom configuration file. 
 alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/.tmux.conf'
+
+# Start tmate with a specified config file
+alias tmate='tmate -f "${XDG_CONFIG_HOME}/tmate/tmate.conf"'
 
 # List with colour and directory first
 alias ls='ls --group-directories-first --color=auto'
@@ -173,6 +182,3 @@ alias clean="sudo rm -rf /var/cache/xbps/*"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
-# start tmate with a specified config file
-alias tmate='tmate -f "${XDG_CONFIG_HOME}/tmate/tmate.conf"'
