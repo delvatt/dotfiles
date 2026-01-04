@@ -37,4 +37,9 @@ endif
 
 set runtimepath+=$HOME/.opt/space-vim/core
 
+" Add snippets folder to runtimepath
+set runtimepath+=~/.vim/my-snippets/
+
+
+
 call spacevim#bootstrap()
