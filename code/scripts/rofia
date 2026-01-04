@@ -4,18 +4,18 @@ j
 # Cheers! addy
 # Edited by Elvis D. Attro.
 
-getcolors () {
-	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
-	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
-	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
-	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
-	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
-	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
-	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
-	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
-	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
-	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
-}
+# getcolors () {
+	# FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+	# BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+	# BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+	# RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+	# GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+	# YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+	# BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+	# MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+	# CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+	# WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+# }
 
 # Only use the function above if the cache of paintee couldn't be found
 if [ -e ~/.cache/paintee ]; then
@@ -23,6 +23,18 @@ if [ -e ~/.cache/paintee ]; then
 	else
 	getcolors
 fi
+
+# Export xrdb colours for dynamic use by rofi theme config file.
+export ROFI_COLOR_FOREGROUND=$FOREGROUND
+export ROFI_COLOR_BACKGROUND=$BACKGROUND
+export ROFI_COLOR_BLACK=$BLACK
+export ROFI_COLOR_RED=$RED
+export ROFI_COLOR_GREEN=$GREEN
+export ROFI_COLOR_YELLOW=$YELLOW
+export ROFI_COLOR_BLUE=$BLUE
+export ROFI_COLOR_MAGENTA=$MAGENTA
+export ROFI_COLOR_CYAN=$CYAN
+export ROFI_COLOR_WHITE=$WHITE
 
 # Launch rofi with custom configuration
 rofi -show drun -sidebar-mode \
